@@ -66,7 +66,7 @@ function game() {
         alert(`Player wins! With a total score of ${playerWin} and the computer with a score of ${computerWin}`);
     }
     else if (computerWin > playerWin) {
-        alert(`Computer wins! <br> With a total score of ${computerWin} and the player with a score of ${playerWin}`);
+        alert(`Computer wins! With a total score of ${computerWin} and the player with a score of ${playerWin}`);
     }
     else if (computerWin === playerWin) {
         alert (`It's a tie! Both player and computer has the total score of ${playerWin}`);
