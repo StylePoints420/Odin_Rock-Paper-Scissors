@@ -20,17 +20,18 @@ function playRound (playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return tieMessage;
     }
-    else if ((playerSelection === "Rock" && computerSelection === "Scissors")
-        || (playerSelection === "Paper" && computerSelection === "Rock")
-        || (playerSelection === "Scissors" && computerSelection === "Paper")) {
+    else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection.toUpperCase() === "SCISSORS")
+        || (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "ROCK")
+        || (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "PAPER")) {
         return winMessage;
     }
-    else if ((computerSelection === "Rock" && playerSelection === "Paper")
-    || (computerSelection === "Paper" && playerSelection === "Rock")
-    || (computerSelection === "Scissors" && playerSelection === "Paper")) {
+    else if ((computerSelection.toUpperCase() === "ROCK" && playerSelection.toUpperCase() === "SCISSORS")
+        || (computerSelection.toUpperCase() === "PAPER" && playerSelection.toUpperCase() === "ROCK")
+        || (computerSelection.toUpperCase() === "SCISSORS" && playerSelection.toUpperCase() === "PAPER")) {
         return loseMessage;
     }
-
 }
+
+const playerSelection = ""
 
 getComputerChoice();
