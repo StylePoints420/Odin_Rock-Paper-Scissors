@@ -1,23 +1,27 @@
 function getComputerChoice() {
+    let choices = ["Rock", "Paper", "Scissors"];
     let computerValue;
     let computerChoice = parseInt((Math.random() * 3) + 1);
     if (computerChoice === 1) {
-        computerValue = "Rock";
+        computerValue = choices[0];
     }
     else if (computerChoice === 2) {
-        computerValue = "Paper";
+        computerValue = choices[1];
     }
     else if (computerChoice === 3) {
-        computerValue = "Scissors";
+        computerValue = choices[2];
     }
+    return computerValue;
 
 }
 
 function playRound (playerSelection, computerSelection) {
-    let tieMessage = `It's a tie! ${playerSelection} vs ${computerSelection} is a draw!`;
-    let loseMessage  = `You Lost to the computer! ${computerSelection} beats ${playerSelection}`;
-    let winMessage = `You won against the computer! ${playerSelection} beats ${computerSelection}`;
-    if (playerSelection === computerSelection) {
+    let tieMessage = `It's a tie! ${playerSelection.toUpperCase()} vs ${computerSelection} is a draw!`;
+    let loseMessage  = `You Lost to the computer! ${computerSelection} beats ${playerSelection.toUpperCase()}`;
+    let winMessage = `You won against the computer! ${playerSelection.toUpperCase()} beats ${computerSelection}`;
+    // let cc = computerSelection.toUpperCase();
+    // console.log(cc);
+    if (playerSelection.toUpperCase() === computerSelection.toUpperCase()) {
         return tieMessage;
     }
     else if ((playerSelection.toUpperCase() === "ROCK" && computerSelection.toUpperCase() === "SCISSORS")
@@ -32,6 +36,6 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = ""
-
-getComputerChoice();
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
